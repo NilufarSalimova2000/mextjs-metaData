@@ -9,7 +9,7 @@ interface dataType {
 }
 
 export async function generateMetadata({params} : {params:{id:string}}) {
-    const id = await params.id;
+    const id = params.id;
     const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
     const data:dataType = await res.json();
 
